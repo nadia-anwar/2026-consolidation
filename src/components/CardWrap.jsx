@@ -8,3 +8,4 @@ function CardWrap({children}){
 }
 
 export default CardWrap
+// this card demonstrates how to wrap componets in UI using the same props 
