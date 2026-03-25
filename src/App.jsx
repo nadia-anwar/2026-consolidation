@@ -2,6 +2,7 @@ import './index.css'
 import ProfileCard from './components/ProfileCard';
 import WelcomeMessage from './components/WelcomeMessage';
 import CardWrap from './components/CardWrap';
+import Day3feature from './components/Day3feature';
 
 
 function App() {
@@ -67,19 +68,9 @@ const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price 
 <CardWrap>
   <p>Hi there, i am children prop</p>
 </CardWrap>
-<div className="container">
-    <div className="box">User 1</div>
-    <div className="box">user 2</div>
-    <div className="box"> user 3</div>
-  </div>
 
+<Day3feature/>
 
-
-<footer className='footer'>
-<p>PP</p>
-<p>TOS</p>
-<p>Socials</p>
-</footer>
     </div>
   );
 }
@@ -89,4 +80,20 @@ export default App;
 
 /*
 A function that takes a name and a greeting — but greeting should default to "Hello" if nothing is passed. Call it two ways — once with a greeting, once without.
-A function called sum that accepts any number of arguments and returns their total. Call it with 2 numbers, then with 5 numbers.*/
+A function called sum that accepts any number of arguments and returns their total. Call it with 2 numbers, then with 5 numbers.
+/*
+<div className="box-grid">
+  <div className="box-item">1</div>
+  <div className="box-item">2</div>
+  <div className="box-item">3</div>
+  <div className="box-item">4</div>
+  <div className="box-item">5</div>
+  <div className="box-item">6</div>
+</div>
+
+<footer className='footer'>
+<p>PP</p>
+<p>TOS</p>
+<p>Socials</p>
+</footer>
+*/
