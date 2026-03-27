@@ -3,6 +3,8 @@ import ProfileCard from './components/ProfileCard';
 import WelcomeMessage from './components/WelcomeMessage';
 import CardWrap from './components/CardWrap';
 import Day3feature from './components/Day3feature';
+import UseState from './components/UseState';
+import ProductsProfile from './components/ProductsProfile';
 
 
 function App() {
@@ -56,13 +58,13 @@ const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price 
      <ul>Career</ul>
       
     </nav>
-
-
+    <ProductsProfile/>
+    <UseState/>
 
     {greetUser("nadia", "hi")}
     {greetUser("nadia")}
     {sum(1, 2, 3, 4, 5)}
-<ProfileCard name="nadia" age={32} role="director" country="USA" bio="Welcome to my hub"/>
+<ProfileCard name="nadia" age="thirty two" role="director" country="USA" />
 <ProfileCard name="sadia" age={22} role="manager" country="USA" bio="Welcome to my hub"/>
 <ProfileCard name="tania" age={24} role="lead" country="USA" bio="Welcome to my hub"/>
 <CardWrap>

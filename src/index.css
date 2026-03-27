@@ -1,18 +1,76 @@
 
+/* 6 color tokens:
+
+primary, secondary, danger, success, text, background
+
+5 spacing tokens:
+
+xs, sm, md, lg, xl */
+
+:root{
+
+  
+  --color-primary: #5DD9C1;
+  --color-secondary: #ACFCD9;
+  --color-danger:#FF0000;
+  --color-success:#90EE90;
+  --color-text:#190933;
+  --color-background:#bfb8c2;
+
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px
+}
+
+body{
+  background-color: var(--color-background);
+}
+
+.nav{
+  height: 70px; /*should i use xl, its too small comparing to 70px*/
+  gap:var(--space-sm);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: var(--space-sm);
+  align-items: center;
+  border: var(--space-xs) solid var(--color-primary);
+  border-radius: var(--space-xs);
+  background-color: var(--color-background);
+  border-width: var(--space-xs);
+}
+
+
+.footer{
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  justify-content: center;
+  height: 150px;
+  width: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+.card{
+  background-color: var(--color-secondary);
+  margin: var(--space-sm);
+  border: var(--space-xs) solid var(--color-secondary);
+  padding: var(--space-sm);
+  border-radius: var(--space-sm);
+  width: 350px;
+}
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  background-color: var(--color-background);
 }
 
-
-.card{
-  margin: 8px;
-  border: 2px solid yellow;
-  padding: 8px;
-  border-radius: 8px;
-  width: 350px;
-}
 
 .title{
   text-shadow: 2px 2pc 50px black;
@@ -69,31 +127,7 @@ p{
   
 }
 
-.nav{
-  height: 70px;
-  gap:10px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin-top: 10px;
-  align-items: center;
-  border: 3px solid rgb(199, 111, 111);
-  border-radius: 5px;
-  background-color: beige;
-  border-width: 2px;
-}
 
-
-.footer{
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  justify-content: center;
-  height: 150px;
-  width: 100%;
-  align-items: center;
-  flex: 1;
-}
 
 .children{
   border: 2px solid brown;
