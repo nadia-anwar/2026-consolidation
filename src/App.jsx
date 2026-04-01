@@ -1,12 +1,13 @@
 import './index.css'
-import ProfileCard from './components/ProfileCard';
 import WelcomeMessage from './components/WelcomeMessage';
 import CardWrap from './components/CardWrap';
 import Day3feature from './components/Day3feature';
 import UseState from './components/UseState';
 import ProductsProfile from './components/ProductsProfile';
-
-
+import ProfileCards from './components/ProfileCards';
+import ArrayOfProducts from './components/ArrayOfProducts';
+import ProductWithQuantity from './components/ProductWithQuantity';
+import FormData from './components/FormData';
 function App() {
 
 /* 
@@ -37,6 +38,9 @@ const userName =(name) => (`Hello ${name}`)
 const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price * quantity}`)*/
  // app()
 
+
+
+
  function greetUser(name, greeting="Hello"){
   return `${greeting}, ${name}`
  }
@@ -48,8 +52,21 @@ const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price 
  //  //{(userName("nadia"))}
     //{(totalCost("toy", 23, 1))}
 
+     const products = [
+        {id:1, name:"toy", price:20, qunatity:5},
+        {id: 2, name:"book", price:15, qunatity:20},
+        {id: 3, name:"bikes", price:120, qunatity:2},
+
+    ]
+
   return (
     <div>
+
+      <FormData/>
+
+<button onClick={(e) => console.log(e)}>Click me</button>
+<input onChange={(e) => console.log(e.target.value)}/>
+
 
     <nav className='nav'>
      <ul>Home</ul>
@@ -58,20 +75,32 @@ const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price 
      <ul>Career</ul>
       
     </nav>
+
+    <ProductWithQuantity name="Ball" price ={25} image="images/image1.png"/>
+
+
+<ArrayOfProducts products = {products}/>
+
+
     <ProductsProfile/>
     <UseState/>
 
     {greetUser("nadia", "hi")}
     {greetUser("nadia")}
     {sum(1, 2, 3, 4, 5)}
-<ProfileCard name="nadia" age="thirty two" role="director" country="USA" />
-<ProfileCard name="sadia" age={22} role="manager" country="USA" bio="Welcome to my hub"/>
-<ProfileCard name="tania" age={24} role="lead" country="USA" bio="Welcome to my hub"/>
+
+
+
 <CardWrap>
   <p>Hi there, i am children prop</p>
 </CardWrap>
 
 <Day3feature/>
+
+<ProfileCards avatar="images/image1.png" name="nadia" role="director" bio="I am extraordinary" />
+<ProfileCards avatar="images/image1.png" name="sadia" role="manager" bio="I am extraordinary" />
+<ProfileCards avatar="images/image1.png" name="rania" role="director" bio="I am extraordinary" />
+
 
     </div>
   );
