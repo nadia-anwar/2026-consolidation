@@ -8,6 +8,11 @@ import ProfileCards from './components/ProfileCards';
 import ArrayOfProducts from './components/ArrayOfProducts';
 import ProductWithQuantity from './components/ProductWithQuantity';
 import FormData from './components/FormData';
+import DayEight from './components/DayEight';
+import UseEffect from './components/UseEffect';
+import QuotesShimmer from './components/QuotesShimmer';
+
+
 function App() {
 
 /* 
@@ -61,6 +66,9 @@ const totalCost =(name, price, quantity) => (`Your price for ${name} is ${price 
 
   return (
     <div>
+
+      <UseEffect/>
+      <DayEight/>
 
       <FormData/>
 
